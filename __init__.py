@@ -3,6 +3,7 @@ import RPi.GPIO as GPIO
 
 GPIO.setup(14,GPIO.OUT)
 GPIO.setup(15,GPIO.OUT)
+GPIO.setup(18,GPIO.OUT)
 
 class LedControl(MycroftSkill):
     
@@ -15,6 +16,7 @@ class LedControl(MycroftSkill):
         self.speak_dialog('led_skill')
         GPIO.output(14,True)
         GPIO.output(15,True)
+        GPIO.output(18,True)
 
 def create_skill():
     return LedControl()
